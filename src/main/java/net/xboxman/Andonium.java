@@ -1,5 +1,6 @@
 package net.xboxman;
 
+import net.xboxman.item.ModItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -44,6 +45,8 @@ public class Andonium
     public Andonium(IEventBus modEventBus, ModContainer modContainer)
     {
         modEventBus.addListener(this::commonSetup);
+
+        ModItems.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
     }
