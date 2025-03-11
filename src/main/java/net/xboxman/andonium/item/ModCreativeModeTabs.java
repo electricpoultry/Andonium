@@ -22,6 +22,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.ANDONIUM);
                         output.accept(ModItems.DIAMOND_SHARD);
                         output.accept(ModItems.ANDONIUM_PICKAXE);
+                        output.accept(ModItems.ANDONIUM_HELMET);
+                        output.accept(ModItems.ANDONIUM_CHESTPLATE);
+                        output.accept(ModItems.ANDONIUM_LEGGINGS);
+                        output.accept(ModItems.ANDONIUM_BOOTS);
                     }).build());
 
     public static final Supplier<CreativeModeTab> ANDONIUM_BLOCKS_TAB = CREATIVE_MODE_TAB.register("andonium_blocks_tab",
