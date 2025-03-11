@@ -4,11 +4,14 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.BlastingRecipe;
 import net.minecraft.world.item.crafting.CampfireCookingRecipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.world.item.crafting.SmeltingRecipe;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
+import net.xboxman.block.ModBlocks;
 import net.xboxman.item.ModItems;
 
 import java.util.List;
@@ -22,6 +25,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildRecipes(RecipeOutput recipeOutput) {
         List<ItemLike> ANDONIUM_TO_DIAMOND_SHARDS = List.of(ModItems.ANDONIUM);
+
+        List<ItemLike> ANDONIUM_ORE_SMELTABLES = List.of(ModBlocks.ANDONIUM_ORE);
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.DIAMOND, 1)
                 .requires(ModItems.DIAMOND_SHARD)
                 .requires(ModItems.DIAMOND_SHARD)
@@ -30,6 +36,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_andonium", has(ModItems.ANDONIUM)).save(recipeOutput);
 
         campfireCooking(recipeOutput, ANDONIUM_TO_DIAMOND_SHARDS, RecipeCategory.MISC, ModItems.DIAMOND_SHARD.get(), 2f, 620, "diamond_andonium");
+
+        oreSmelting(recipeOutput, ANDONIUM_ORE_SMELTABLES, RecipeCategory.MISC, ModItems.ANDONIUM.get(), 1f, 200, "andonium_smelting");
+        oreBlasting(recipeOutput, ANDONIUM_ORE_SMELTABLES, RecipeCategory.MISC, ModItems.ANDONIUM.get(), 1f, 100, "andonium_smelting");
     }
 
     protected static void campfireCooking(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
@@ -37,4 +46,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreCooking(recipeOutput, RecipeSerializer.CAMPFIRE_COOKING_RECIPE, CampfireCookingRecipe::new, pIngredients, pCategory, pResult,
                 pExperience, pCookingTIme, pGroup, "_from_smelting");
     }
+
+    protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
+                                      float pExperience, int pCookingTIme, String pGroup) {
+        oreCooking(recipeOutput, RecipeSerializer.SMELTING_RECIPE, SmeltingRecipe::new, pIngredients, pCategory, pResult,
+                pExperience, pCookingTIme, pGroup, "_from_smelting");
+    }
+
+    protected static void oreBlasting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
+                                      float pExperience, int pCookingTime, String pGroup) {
+        oreCooking(recipeOutput, RecipeSerializer.BLASTING_RECIPE, BlastingRecipe::new, pIngredients, pCategory, pResult,
+                pExperience, pCookingTime, pGroup, "_from_blasting");
+    }
+
 }
