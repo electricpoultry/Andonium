@@ -1,4 +1,4 @@
-package net.xboxman.datagen;
+package net.xboxman.andonium.datagen;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -9,10 +9,9 @@ import net.minecraft.world.item.crafting.CampfireCookingRecipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.SmeltingRecipe;
 import net.minecraft.world.level.ItemLike;
-import net.neoforged.fml.ModContainer;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
-import net.xboxman.block.ModBlocks;
-import net.xboxman.item.ModItems;
+import net.xboxman.andonium.block.ModBlocks;
+import net.xboxman.andonium.item.ModItems;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;

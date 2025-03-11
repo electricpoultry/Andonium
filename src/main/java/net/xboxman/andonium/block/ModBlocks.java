@@ -1,4 +1,4 @@
-package net.xboxman.block;
+package net.xboxman.andonium.block;
 
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -10,12 +10,12 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import net.xboxman.item.ModItems;
+import net.xboxman.andonium.item.ModItems;
 
 import java.util.function.Supplier;
 
 import static net.minecraft.world.item.Items.registerBlock;
-import static net.xboxman.Andonium.MOD_ID;
+import static net.xboxman.andonium.Andonium.MOD_ID;
 
 public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MOD_ID);

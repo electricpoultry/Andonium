@@ -1,4 +1,4 @@
-package net.xboxman.datagen;
+package net.xboxman.andonium.datagen;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
@@ -15,7 +15,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-import static net.xboxman.Andonium.MOD_ID;
+import static net.xboxman.andonium.Andonium.MOD_ID;
 
 @EventBusSubscriber(modid = MOD_ID, bus = EventBusSubscriber.Bus.MOD)
 public class DataGenerators {

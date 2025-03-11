@@ -1,4 +1,4 @@
-package net.xboxman.item;
+package net.xboxman.andonium.item;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -6,11 +6,11 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import net.xboxman.block.ModBlocks;
+import net.xboxman.andonium.block.ModBlocks;
 
 import java.util.function.Supplier;
 
-import static net.xboxman.Andonium.MOD_ID;
+import static net.xboxman.andonium.Andonium.MOD_ID;
 
 public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MOD_ID);
@@ -21,6 +21,7 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.ANDONIUM);
                         output.accept(ModItems.DIAMOND_SHARD);
+                        output.accept(ModItems.ANDONIUM_PICKAXE);
                     }).build());
 
     public static final Supplier<CreativeModeTab> ANDONIUM_BLOCKS_TAB = CREATIVE_MODE_TAB.register("andonium_blocks_tab",
