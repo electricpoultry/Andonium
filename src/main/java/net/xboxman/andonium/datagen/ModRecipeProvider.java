@@ -34,6 +34,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModItems.DIAMOND_SHARD)
                 .unlockedBy("has_andonium", has(ModItems.ANDONIUM)).save(recipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ANDONIUM_PICKAXE.get())
+                .pattern("ANA")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('A', ModItems.ANDONIUM.get())
+                .define('S', Items.STICK)
+                .define('N', Items.NETHERITE_PICKAXE)
+                .unlockedBy("has_andonium", has(ModItems.ANDONIUM)).save(recipeOutput);
+
         campfireCooking(recipeOutput, ANDONIUM_TO_DIAMOND_SHARDS, RecipeCategory.MISC, ModItems.DIAMOND_SHARD.get(), 2f, 620, "diamond_andonium");
 
         oreSmelting(recipeOutput, ANDONIUM_ORE_SMELTABLES, RecipeCategory.MISC, ModItems.ANDONIUM.get(), 1f, 200, "andonium_smelting");

@@ -1,4 +1,6 @@
-// 1.21.1	2025-03-11T14:28:44.598730083	Recipes
+// 1.21.1	2025-03-11T15:35:35.034957758	Recipes
+4f050b34b84214e24a238130732d992ec1fcce00 data/andonium/advancement/recipes/misc/andonium_pickaxe.json
+f2e8e1b23c863e3a811f51765a10b35dde2264b8 data/andonium/recipe/andonium_pickaxe.json
 4652332b8bb4980e067031414482204657384b06 data/minecraft/advancement/recipes/misc/andonium_from_blasting_andonium_ore.json
 f380b3fff572d0c7677608ce06b6c96aa6da1fba data/minecraft/advancement/recipes/misc/andonium_from_smelting_andonium_ore.json
 59651f7888535a66a804ca05e8756efd6cd7dfc3 data/minecraft/advancement/recipes/misc/diamond.json
