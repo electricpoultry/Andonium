@@ -19,6 +19,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.andonium.andonium_items"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.ANDONIUM);
+                        output.accept(ModItems.DIAMOND_SHARD);
                     }).build());
 
     public static void register(IEventBus eventBus) {
