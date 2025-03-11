@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "cookingtime": 620,
+  "experience": 2.0,
+  "group": "diamond_andonium",
+  "ingredient": {
+    "item": "andonium:andonium"
+  },
+  "result": {
+    "count": 1,
+    "id": "andonium:diamond_shard"
+  }
+}
