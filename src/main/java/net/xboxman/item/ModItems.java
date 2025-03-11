@@ -12,6 +12,8 @@ public class ModItems {
 
     public static final DeferredItem<Item> ANDONIUM = ITEMS.register("andonium", () -> new Item(new Item.Properties()));
 
+    public static final DeferredItem<Item> DIAMOND_SHARD = ITEMS.register("diamond_shard", () -> new Item(new Item.Properties()));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

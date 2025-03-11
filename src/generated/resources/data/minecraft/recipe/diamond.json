@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "andonium:diamond_shard"
+    },
+    {
+      "item": "andonium:diamond_shard"
+    },
+    {
+      "item": "andonium:diamond_shard"
+    },
+    {
+      "item": "andonium:diamond_shard"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:diamond"
+  }
+}

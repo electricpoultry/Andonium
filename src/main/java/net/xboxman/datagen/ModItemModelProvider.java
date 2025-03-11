@@ -13,5 +13,6 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         basicItem(ModItems.ANDONIUM.get());
+        basicItem(ModItems.DIAMOND_SHARD.get());
     }
 }
