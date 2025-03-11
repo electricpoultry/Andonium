@@ -2,5 +2,8 @@
   "item.andonium.andonium": "Andonium",
   "item.andonium.diamond_shard": "Diamond Shard",
 
-  "creativetab.andonium.andonium_items": "Andonium Items"
+  "block.andonium.andonium_ore": "Andonium Ore",
+
+  "creativetab.andonium.andonium_items": "Andonium Items",
+  "creativetab.andonium.andonium_blocks": "Andonium Blocks"
 }

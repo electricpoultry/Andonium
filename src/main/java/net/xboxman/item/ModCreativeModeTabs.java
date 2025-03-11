@@ -6,6 +6,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import net.xboxman.block.ModBlocks;
 
 import java.util.function.Supplier;
 
@@ -20,6 +21,13 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.ANDONIUM);
                         output.accept(ModItems.DIAMOND_SHARD);
+                    }).build());
+
+    public static final Supplier<CreativeModeTab> ANDONIUM_BLOCKS_TAB = CREATIVE_MODE_TAB.register("andonium_blocks_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.ANDONIUM_ORE.get()))
+                    .title(Component.translatable("creativetab.andonium.andonium_blocks"))
+                    .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModBlocks.ANDONIUM_ORE);
                     }).build());
 
     public static void register(IEventBus eventBus) {
