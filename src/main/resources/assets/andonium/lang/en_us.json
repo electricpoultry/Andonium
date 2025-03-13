@@ -6,8 +6,14 @@
   "item.andonium.andonium_chestplate": "Andonium Chestplate",
   "item.andonium.andonium_leggings": "Andonium Leggings",
   "item.andonium.andonium_boots": "Andonium Boots",
+  "item.andonium.andonium_intro_book": "Andonium Mod Intro Book",
 
   "block.andonium.andonium_ore": "Andonium Ore",
+
+  "gui.andonium.andoniumbookgui.label_hello_and_welcome_to_the_andoniu": "Hello And Welcome To",
+  "gui.andonium.andoniumbookgui.label_the_andonium_mod": "The Andonium Mod",
+  "gui.andonium.andoniumbookgui.label_have_fun": "Have Fun",
+  "gui.andonium.andoniumbookgui.button_hello": "Done",
 
   "creativetab.andonium.andonium_items": "Andonium Items",
   "creativetab.andonium.andonium_blocks": "Andonium Blocks"

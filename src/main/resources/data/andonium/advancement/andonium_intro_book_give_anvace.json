@@ -1,0 +1,8 @@
+{
+  "criteria": {
+    "andonium_intro_book_give_anvace_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "minecraft:adventure/adventuring_time"
+}

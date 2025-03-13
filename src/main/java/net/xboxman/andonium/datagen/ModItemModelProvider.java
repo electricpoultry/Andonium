@@ -43,6 +43,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.ANDONIUM.get());
         basicItem(ModItems.DIAMOND_SHARD.get());
 
+        basicItem(ModItems.INTRO_BOOK.get());
+
         handheldItem(ModItems.ANDONIUM_PICKAXE);
 
         trimmedArmorItem(ModItems.ANDONIUM_HELMET);

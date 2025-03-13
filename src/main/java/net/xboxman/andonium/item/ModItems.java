@@ -3,9 +3,11 @@ package net.xboxman.andonium.item;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.world.item.Rarity;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import net.xboxman.andonium.item.custom.ModintroBook;
 
 import static net.xboxman.andonium.Andonium.MOD_ID;
 
@@ -32,6 +34,8 @@ public class ModItems {
     public static final DeferredItem<ArmorItem> ANDONIUM_BOOTS = ITEMS.register("andonium_boots",
             () -> new ArmorItem(ModArmorMaterials.ANDONIUM_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(15))));
+
+    public static final DeferredItem<Item> INTRO_BOOK = ITEMS.register("andonium_intro_book", ModintroBook::new);
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
