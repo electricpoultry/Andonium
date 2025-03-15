@@ -6,10 +6,7 @@ import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 import net.neoforged.neoforge.network.handling.IPayloadHandler;
 import net.neoforged.neoforge.network.registration.PayloadRegistrar;
-import net.xboxman.andonium.block.ModBlocks;
-import net.xboxman.andonium.item.ModCreativeModeTabs;
-import net.xboxman.andonium.item.ModItems;
-import net.xboxman.andonium.util.ModMenus;
+import net.xboxman.andonium.util.Registers.Registers;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -59,13 +56,7 @@ public class Andonium
     {
         modEventBus.addListener(this::commonSetup);
 
-        ModItems.register(modEventBus);
-
-        ModBlocks.register(modEventBus);
-
-        ModCreativeModeTabs.register(modEventBus);
-
-        ModMenus.REGISTRY.register(modEventBus);
+        Registers.registerAll(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::registerNetworking);
