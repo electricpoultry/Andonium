@@ -27,6 +27,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.ANDONIUM_LEGGINGS);
                         output.accept(ModItems.ANDONIUM_BOOTS);
                         output.accept(ModItems.INTRO_BOOK);
+                        output.accept(KotlinModItems.INSTANCE.getKotonium());
                     }).build());
 
     public static final Supplier<CreativeModeTab> ANDONIUM_BLOCKS_TAB = CREATIVE_MODE_TAB.register("andonium_blocks_tab",
