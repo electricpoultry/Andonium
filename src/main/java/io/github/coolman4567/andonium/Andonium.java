@@ -3,6 +3,8 @@ package io.github.coolman4567.andonium;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
+import net.minecraft.resources.ResourceLocation;
+import net.neoforged.neoforge.event.server.ServerAboutToStartEvent;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 import net.neoforged.neoforge.network.handling.IPayloadHandler;
 import net.neoforged.neoforge.network.registration.PayloadRegistrar;
@@ -22,7 +24,6 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -52,8 +53,7 @@ public class Andonium
         networkingRegistered = true;
     }
 
-    public Andonium(IEventBus modEventBus, ModContainer modContainer)
-    {
+    public Andonium(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
 
         Registers.registerAll(modEventBus);
@@ -62,10 +62,8 @@ public class Andonium
         modEventBus.addListener(this::registerNetworking);
     }
 
-    private void commonSetup(final FMLCommonSetupEvent event)
-    {
-        // Some common setup code
-        LOGGER.info("HELLO FROM COMMON SETUP");
+    private void commonSetup(final FMLCommonSetupEvent event) {
+        
     }
 
     @SubscribeEvent

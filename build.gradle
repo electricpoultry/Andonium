@@ -123,7 +123,7 @@ configurations {
 
 dependencies {
     // Must use the '-neoforge' version on NeoForge. If on regular forge, omit the '-neoforge'
-    implementation 'thedarkcolour:kotlinforforge-neoforge:5.7.0'
+    implementation "thedarkcolour:kotlinforforge-neoforge:${kotlin_version}"
 
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
