@@ -29,6 +29,19 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.ANDONIUM_BOOTS);
                         output.accept(ModItems.INTRO_BOOK);
                         output.accept(KotlinModItems.INSTANCE.getKotonium());
+                        output.accept(KotlinModItems.INSTANCE.getHot_Chocolate());
+                        output.accept(KotlinModItems.INSTANCE.getHot_Chocolate_With_Whipped_Cream());
+                        output.accept(KotlinModItems.INSTANCE.getHot_Chocolate_With_Marshmallow());
+                        output.accept(KotlinModItems.INSTANCE.getHot_Chocolate_With_Whipped_Cream_And_Marshmallow());
+                        output.accept(KotlinModItems.INSTANCE.getHot_Chocolate_Powder());
+                        output.accept(KotlinModItems.INSTANCE.getHot_Chocolate_Powder_With_Marshmallow());
+                        output.accept(KotlinModItems.INSTANCE.getWhipped_cream());
+                        output.accept(KotlinModItems.INSTANCE.getMarshmallow());
+                        output.accept(KotlinModItems.INSTANCE.getCup());
+                        output.accept(KotlinModItems.INSTANCE.getButter());
+                        output.accept(KotlinModItems.INSTANCE.getHeavy_Cream());
+                        output.accept(KotlinModItems.INSTANCE.getVanilla_Beans());
+                        output.accept(KotlinModItems.INSTANCE.getVanilla_Extract());
                     }).build());
 
     public static final Supplier<CreativeModeTab> ANDONIUM_BLOCKS_TAB = CREATIVE_MODE_TAB.register("andonium_blocks_tab",

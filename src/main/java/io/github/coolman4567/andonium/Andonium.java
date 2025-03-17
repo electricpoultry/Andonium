@@ -3,12 +3,10 @@ package io.github.coolman4567.andonium;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
-import net.minecraft.resources.ResourceLocation;
-import net.neoforged.neoforge.event.server.ServerAboutToStartEvent;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 import net.neoforged.neoforge.network.handling.IPayloadHandler;
 import net.neoforged.neoforge.network.registration.PayloadRegistrar;
-import io.github.coolman4567.andonium.util.Registers.Registers;
+import io.github.coolman4567.andonium.kotlin.util.registers.Registers;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -29,8 +27,7 @@ import java.util.Map;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(Andonium.MOD_ID)
-public class Andonium
-{
+public class Andonium {
     public static final String MOD_ID = "andonium";
     private static final Logger LOGGER = LogUtils.getLogger();
 
@@ -67,8 +64,7 @@ public class Andonium
     }
 
     @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event)
-    {
+    public void onServerStarting(ServerStartingEvent event) {
         LOGGER.info("HELLO from server starting");
     }
 
@@ -76,8 +72,7 @@ public class Andonium
     public static class ClientModEvents
     {
         @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event)
-        {
+        public static void onClientSetup(FMLClientSetupEvent event) {
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
         }

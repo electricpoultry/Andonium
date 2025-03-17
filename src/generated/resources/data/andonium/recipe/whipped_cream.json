@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "andonium:vanilla_extract"
+    },
+    "H": {
+      "item": "minecraft:sugar"
+    },
+    "T": {
+      "item": "andonium:heavy_cream"
+    }
+  },
+  "pattern": [
+    "HB ",
+    "T  ",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "andonium:whipped_cream"
+  }
+}

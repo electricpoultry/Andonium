@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:water_bucket"
+    },
+    "H": {
+      "item": "minecraft:sugar"
+    },
+    "T": {
+      "item": "andonium:butter"
+    }
+  },
+  "pattern": [
+    "HB ",
+    "T  ",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "andonium:marshmallow"
+  }
+}

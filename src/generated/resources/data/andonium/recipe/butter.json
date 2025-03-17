@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": {
+      "item": "minecraft:milk_bucket"
+    }
+  },
+  "pattern": [
+    "H  ",
+    "   ",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "andonium:butter"
+  }
+}

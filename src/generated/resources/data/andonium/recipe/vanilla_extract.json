@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "andonium:vanilla_beans"
+    },
+    "H": {
+      "item": "minecraft:water_bucket"
+    }
+  },
+  "pattern": [
+    "HB ",
+    "   ",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "andonium:vanilla_extract"
+  }
+}

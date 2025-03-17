@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "andonium:item/hot_chocolate_with_whipped_cream"
+  }
+}

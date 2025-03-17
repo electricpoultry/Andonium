@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "andonium:marshmallow"
+    },
+    "H": {
+      "item": "andonium:hot_chocolate_powder"
+    }
+  },
+  "pattern": [
+    "HB ",
+    "   ",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "andonium:hot_chocolate_powder_with_marshmallow"
+  }
+}

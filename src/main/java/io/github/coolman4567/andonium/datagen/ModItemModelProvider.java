@@ -1,5 +1,6 @@
 package io.github.coolman4567.andonium.datagen;
 
+import io.github.coolman4567.andonium.kotlin.item.KotlinModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -42,6 +43,20 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         basicItem(ModItems.ANDONIUM.get());
         basicItem(ModItems.DIAMOND_SHARD.get());
+
+        basicItem(KotlinModItems.INSTANCE.getHot_Chocolate_Powder().get());
+        basicItem(KotlinModItems.INSTANCE.getHot_Chocolate_Powder_With_Marshmallow().get());
+        basicItem(KotlinModItems.INSTANCE.getHot_Chocolate().get());
+        basicItem(KotlinModItems.INSTANCE.getHot_Chocolate_With_Marshmallow().get());
+        basicItem(KotlinModItems.INSTANCE.getHot_Chocolate_With_Whipped_Cream().get());
+        basicItem(KotlinModItems.INSTANCE.getHot_Chocolate_With_Whipped_Cream_And_Marshmallow().get());
+        basicItem(KotlinModItems.INSTANCE.getWhipped_cream().get());
+        basicItem(KotlinModItems.INSTANCE.getMarshmallow().get());
+        basicItem(KotlinModItems.INSTANCE.getCup().get());
+        basicItem(KotlinModItems.INSTANCE.getButter().get());
+        basicItem(KotlinModItems.INSTANCE.getVanilla_Beans().get());
+        basicItem(KotlinModItems.INSTANCE.getVanilla_Extract().get());
+        basicItem(KotlinModItems.INSTANCE.getHeavy_Cream().get());
 
         basicItem(ModItems.INTRO_BOOK.get());
 
