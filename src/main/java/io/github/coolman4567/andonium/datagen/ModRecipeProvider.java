@@ -51,6 +51,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('N', Items.NETHERITE_PICKAXE)
                 .unlockedBy("has_andonium", has(ModItems.ANDONIUM)).save(recipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ANDONIUM_AXE.get())
+                .pattern("AN ")
+                .pattern("AS ")
+                .pattern(" S ")
+                .define('A', ModItems.ANDONIUM.get())
+                .define('S', Items.STICK)
+                .define('N', Items.NETHERITE_AXE)
+                .unlockedBy("has_andonium", has(ModItems.ANDONIUM)).save(recipeOutput);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, KotlinModItems.INSTANCE.getHot_Chocolate())
                 .pattern("CH ")
                 .pattern("B  ")

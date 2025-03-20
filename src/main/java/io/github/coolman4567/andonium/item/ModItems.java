@@ -1,6 +1,7 @@
 package io.github.coolman4567.andonium.item;
 
 import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.PickaxeItem;
 import net.neoforged.bus.api.IEventBus;
@@ -18,8 +19,12 @@ public class ModItems {
     public static final DeferredItem<Item> DIAMOND_SHARD = ITEMS.register("diamond_shard", () -> new Item(new Item.Properties()));
 
     public static final DeferredItem<PickaxeItem> ANDONIUM_PICKAXE = ITEMS.register("andonium_pickaxe",
-            () -> new PickaxeItem(ModToolTiers.ANDONIUM, new Item.Properties()
-                    .attributes(PickaxeItem.createAttributes(ModToolTiers.ANDONIUM, 6.0F, -1.0f))));
+            () -> new PickaxeItem(ModToolTiers.ANDONIUM_PICKAXE, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(ModToolTiers.ANDONIUM_PICKAXE, 6.0F, -2.0f))));
+
+    public static final DeferredItem<AxeItem> ANDONIUM_AXE = ITEMS.register("andonium_axe",
+            () -> new AxeItem(ModToolTiers.ANDONIUM_AXE, new Item.Properties()
+                    .attributes(AxeItem.createAttributes(ModToolTiers.ANDONIUM_AXE, 6.0F, -2.0f))));
 
     public static final DeferredItem<ArmorItem> ANDONIUM_HELMET = ITEMS.register("andonium_helmet",
             () -> new ArmorItem(ModArmorMaterials.ANDONIUM_ARMOR_MATERIAL, ArmorItem.Type.HELMET,

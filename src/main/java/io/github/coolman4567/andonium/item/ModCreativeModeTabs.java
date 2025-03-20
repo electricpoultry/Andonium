@@ -22,6 +22,7 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.ANDONIUM);
                         output.accept(ModItems.DIAMOND_SHARD);
+                        output.accept(ModItems.ANDONIUM_AXE);
                         output.accept(ModItems.ANDONIUM_PICKAXE);
                         output.accept(ModItems.ANDONIUM_HELMET);
                         output.accept(ModItems.ANDONIUM_CHESTPLATE);

@@ -25,5 +25,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
     protected void addTags(HolderLookup.Provider provider) {
         tag(ItemTags.PICKAXES)
                 .add(ModItems.ANDONIUM_PICKAXE.get());
+        tag(ItemTags.AXES)
+                .add(ModItems.ANDONIUM_AXE.get());
     }
 }
