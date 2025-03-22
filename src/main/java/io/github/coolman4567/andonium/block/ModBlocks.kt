@@ -1,39 +1,36 @@
-package io.github.coolman4567.andonium.block;
+package io.github.coolman4567.andonium.block
 
-import net.minecraft.util.valueproviders.UniformInt;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.DropExperienceBlock;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.registries.DeferredBlock;
-import net.neoforged.neoforge.registries.DeferredRegister;
-import io.github.coolman4567.andonium.item.ModItems;
+import io.github.coolman4567.andonium.Andonium
+import io.github.coolman4567.andonium.item.ModItems
+import net.minecraft.util.valueproviders.UniformInt
+import net.minecraft.world.item.BlockItem
+import net.minecraft.world.item.Item
+import net.minecraft.world.level.block.Block
+import net.minecraft.world.level.block.DropExperienceBlock
+import net.minecraft.world.level.block.SoundType
+import net.minecraft.world.level.block.state.BlockBehaviour
+import net.neoforged.bus.api.IEventBus
+import net.neoforged.neoforge.registries.DeferredBlock
+import net.neoforged.neoforge.registries.DeferredRegister
+import java.util.function.Supplier
 
-import java.util.function.Supplier;
+object ModBlocks {
+    val BLOCKS: DeferredRegister.Blocks = DeferredRegister.createBlocks(Andonium.MOD_ID)
 
-import static net.minecraft.world.item.Items.registerBlock;
-import static io.github.coolman4567.andonium.Andonium.MOD_ID;
+    val KOTONIUM_ORE: DeferredBlock<Block> = registerBlock("kotonium_ore") { DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)) }
+    val ANDONIUM_ORE: DeferredBlock<Block> = registerBlock("andonium_ore") { DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)) }
 
-public class ModBlocks {
-    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MOD_ID);
-
-    public static final DeferredBlock<Block> ANDONIUM_ORE = registerBlock("andonium_ore", () -> new DropExperienceBlock(UniformInt.of(2, 4),
-                    BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
-
-    private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
-        DeferredBlock<T> toReturn = BLOCKS.register(name, block);
-        registerBlockItem(name, toReturn);
-        return toReturn;
+    private fun <T : Block?> registerBlock(name: String, block: Supplier<T>): DeferredBlock<T> {
+        val toReturn = BLOCKS.register(name, block)
+        registerBlockItem(name, toReturn)
+        return toReturn
     }
 
-    private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
-        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+    private fun <T : Block?> registerBlockItem(name: String, block: DeferredBlock<T>) {
+        ModItems.ITEMS.register(name, Supplier { BlockItem(block.get(), Item.Properties()) })
     }
 
-    public static void register(IEventBus eventBus) {
-        BLOCKS.register(eventBus);
+    fun register(eventBus: IEventBus) {
+        BLOCKS.register(eventBus)
     }
 }

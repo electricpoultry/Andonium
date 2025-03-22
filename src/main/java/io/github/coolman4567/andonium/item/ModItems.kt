@@ -1,47 +1,39 @@
-package io.github.coolman4567.andonium.item;
+package io.github.coolman4567.andonium.item
 
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.AxeItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.PickaxeItem;
-import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.registries.DeferredItem;
-import net.neoforged.neoforge.registries.DeferredRegister;
-import io.github.coolman4567.andonium.item.custom.ModintroBook;
+import net.neoforged.bus.api.IEventBus
+import net.neoforged.neoforge.registries.DeferredItem
+import net.neoforged.neoforge.registries.DeferredRegister
+import io.github.coolman4567.andonium.Andonium.MOD_ID
+import net.minecraft.world.item.*
+import java.util.function.Supplier
 
-import static io.github.coolman4567.andonium.Andonium.MOD_ID;
+object ModItems {
+    val ITEMS: DeferredRegister.Items = DeferredRegister.createItems(MOD_ID)
 
-public class ModItems {
-    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MOD_ID);
+    val Kotonium: DeferredItem<Item> = ITEMS.register("kotonium", Supplier { Item(Item.Properties()) })
+    val Andonium: DeferredItem<Item> = ITEMS.register("andonium", Supplier { Item(Item.Properties()) })
+    val Diamond_Shard: DeferredItem<Item> = ITEMS.register("diamond_shard", Supplier { Item(Item.Properties()) })
+    val Andonium_Pickaxe: DeferredItem<PickaxeItem> = ITEMS.register("andonium_pickaxe", Supplier { PickaxeItem(ModToolTiers.ANDONIUM_PICKAXE, Item.Properties().rarity(Rarity.EPIC).attributes(PickaxeItem.createAttributes(ModToolTiers.ANDONIUM_PICKAXE, 6.0f, -2.0f))) })
+    val Andonium_Axe: DeferredItem<AxeItem> = ITEMS.register("andonium_axe", Supplier { AxeItem(ModToolTiers.ANDONIUM_AXE, Item.Properties().rarity(Rarity.EPIC).attributes(AxeItem.createAttributes(ModToolTiers.ANDONIUM_AXE, 6.0f, -2.0f))) })
+    val Andonium_Helmet: DeferredItem<ArmorItem> = ITEMS.register("andonium_helmet", Supplier { ArmorItem(ModArmorMaterials.ANDONIUM_ARMOR_MATERIAL, ArmorItem.Type.HELMET, Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(15))) })
+    val Andonium_Chestplate: DeferredItem<ArmorItem> = ITEMS.register("andonium_chestplate", Supplier { ArmorItem(ModArmorMaterials.ANDONIUM_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(15))) })
+    val Andonium_Leggings: DeferredItem<ArmorItem> = ITEMS.register("andonium_leggings", Supplier { ArmorItem(ModArmorMaterials.ANDONIUM_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(15))) })
+    val Andonium_Boots: DeferredItem<ArmorItem> = ITEMS.register("andonium_boots", Supplier { ArmorItem(ModArmorMaterials.ANDONIUM_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(15))) })
+    val Hot_Chocolate: DeferredItem<Item> = ITEMS.register("hot_chocolate", Supplier { Item(Item.Properties().food(ModFoodProperties.HOT_CHOCOLATE)) })
+    val Hot_Chocolate_With_Whipped_Cream: DeferredItem<Item> = ITEMS.register("hot_chocolate_with_whipped_cream", Supplier { Item(Item.Properties().food(ModFoodProperties.HOT_CHOCOLATE)) })
+    val Hot_Chocolate_With_Marshmallow: DeferredItem<Item> = ITEMS.register("hot_chocolate_with_marshmallow", Supplier { Item(Item.Properties().food(ModFoodProperties.HOT_CHOCOLATE)) })
+    val Hot_Chocolate_With_Whipped_Cream_And_Marshmallow: DeferredItem<Item> = ITEMS.register("hot_chocolate_with_whipped_cream_and_marshmallow", Supplier { Item(Item.Properties().food(ModFoodProperties.HOT_CHOCOLATE_WITH_WHIPPED_CREAM_AND_MARSHMALLOW)) })
+    val Hot_Chocolate_Powder: DeferredItem<Item> = ITEMS.register("hot_chocolate_powder", Supplier { Item(Item.Properties()) })
+    val Hot_Chocolate_Powder_With_Marshmallow: DeferredItem<Item> = ITEMS.register("hot_chocolate_powder_with_marshmallow", Supplier { Item(Item.Properties()) })
+    val Whipped_cream: DeferredItem<Item> = ITEMS.register("whipped_cream", Supplier { Item(Item.Properties().food(ModFoodProperties.WHIPPED_CREAM)) })
+    val Marshmallow: DeferredItem<Item> = ITEMS.register("marshmallow", Supplier { Item(Item.Properties().food(ModFoodProperties.MARSHMALLOW)) })
+    val Cup: DeferredItem<Item> = ITEMS.register("cup", Supplier { Item(Item.Properties()) })
+    val Butter: DeferredItem<Item> = ITEMS.register("butter", Supplier { Item(Item.Properties()) })
+    val Heavy_Cream: DeferredItem<Item> = ITEMS.register("heavy_cream", Supplier { Item(Item.Properties()) })
+    val Vanilla_Beans: DeferredItem<Item> = ITEMS.register("vanilla_beans", Supplier { Item(Item.Properties()) })
+    val Vanilla_Extract: DeferredItem<Item> = ITEMS.register("vanilla_extract", Supplier { Item(Item.Properties()) })
 
-    public static final DeferredItem<Item> ANDONIUM = ITEMS.register("andonium", () -> new Item(new Item.Properties()));
-
-    public static final DeferredItem<Item> DIAMOND_SHARD = ITEMS.register("diamond_shard", () -> new Item(new Item.Properties()));
-
-    public static final DeferredItem<PickaxeItem> ANDONIUM_PICKAXE = ITEMS.register("andonium_pickaxe",
-            () -> new PickaxeItem(ModToolTiers.ANDONIUM_PICKAXE, new Item.Properties()
-                    .attributes(PickaxeItem.createAttributes(ModToolTiers.ANDONIUM_PICKAXE, 6.0F, -2.0f))));
-
-    public static final DeferredItem<AxeItem> ANDONIUM_AXE = ITEMS.register("andonium_axe",
-            () -> new AxeItem(ModToolTiers.ANDONIUM_AXE, new Item.Properties()
-                    .attributes(AxeItem.createAttributes(ModToolTiers.ANDONIUM_AXE, 6.0F, -2.0f))));
-
-    public static final DeferredItem<ArmorItem> ANDONIUM_HELMET = ITEMS.register("andonium_helmet",
-            () -> new ArmorItem(ModArmorMaterials.ANDONIUM_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
-                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(15))));
-    public static final DeferredItem<ArmorItem> ANDONIUM_CHESTPLATE = ITEMS.register("andonium_chestplate",
-            () -> new ArmorItem(ModArmorMaterials.ANDONIUM_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
-                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(15))));
-    public static final DeferredItem<ArmorItem> ANDONIUM_LEGGINGS = ITEMS.register("andonium_leggings",
-            () -> new ArmorItem(ModArmorMaterials.ANDONIUM_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
-                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(15))));
-    public static final DeferredItem<ArmorItem> ANDONIUM_BOOTS = ITEMS.register("andonium_boots",
-            () -> new ArmorItem(ModArmorMaterials.ANDONIUM_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
-                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(15))));
-
-    public static final DeferredItem<Item> INTRO_BOOK = ITEMS.register("andonium_intro_book", ModintroBook::new);
-
-    public static void register(IEventBus eventBus) {
-        ITEMS.register(eventBus);
+    fun register(eventBus: IEventBus) {
+        ITEMS.register(eventBus)
     }
 }

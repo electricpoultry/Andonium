@@ -1,19 +1,17 @@
-package io.github.coolman4567.andonium.worldgen;
+package io.github.coolman4567.andonium.worldgen
 
-import net.minecraft.world.level.levelgen.placement.*;
+import net.minecraft.world.level.levelgen.placement.*
 
-import java.util.List;
-
-public class ModOrePlacement {
-    public static List<PlacementModifier> orePlacement(PlacementModifier pCountPlacement, PlacementModifier pHeightRange) {
-        return List.of(pCountPlacement, InSquarePlacement.spread(), pHeightRange, BiomeFilter.biome());
+object ModOrePlacement {
+    fun orePlacement(pCountPlacement: PlacementModifier, pHeightRange: PlacementModifier): List<PlacementModifier> {
+        return java.util.List.of(pCountPlacement, InSquarePlacement.spread(), pHeightRange, BiomeFilter.biome())
     }
 
-    public static List<PlacementModifier> commonOrePlacement(int pCount, PlacementModifier pHeightRange) {
-        return orePlacement(CountPlacement.of(pCount), pHeightRange);
+    fun commonOrePlacement(pCount: Int, pHeightRange: PlacementModifier): List<PlacementModifier> {
+        return orePlacement(CountPlacement.of(pCount), pHeightRange)
     }
 
-    public static List<PlacementModifier> rareOrePlacement(int pChance, PlacementModifier pHeightRange) {
-        return orePlacement(RarityFilter.onAverageOnceEvery(pChance), pHeightRange);
+    fun rareOrePlacement(pChance: Int, pHeightRange: PlacementModifier): List<PlacementModifier> {
+        return orePlacement(RarityFilter.onAverageOnceEvery(pChance), pHeightRange)
     }
 }

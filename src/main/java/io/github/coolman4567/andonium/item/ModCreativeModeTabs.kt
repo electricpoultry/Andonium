@@ -1,58 +1,84 @@
-package io.github.coolman4567.andonium.item;
+package io.github.coolman4567.andonium.item
 
-import io.github.coolman4567.andonium.kotlin.item.KotlinModItems;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.ItemStack;
-import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.registries.DeferredRegister;
-import io.github.coolman4567.andonium.block.ModBlocks;
+import io.github.coolman4567.andonium.Andonium.MOD_ID
+import io.github.coolman4567.andonium.block.ModBlocks
+import io.github.coolman4567.andonium.item.ModItems.Andonium
+import io.github.coolman4567.andonium.item.ModItems.Andonium_Axe
+import io.github.coolman4567.andonium.item.ModItems.Andonium_Boots
+import io.github.coolman4567.andonium.item.ModItems.Andonium_Chestplate
+import io.github.coolman4567.andonium.item.ModItems.Andonium_Helmet
+import io.github.coolman4567.andonium.item.ModItems.Andonium_Leggings
+import io.github.coolman4567.andonium.item.ModItems.Andonium_Pickaxe
+import io.github.coolman4567.andonium.item.ModItems.Butter
+import io.github.coolman4567.andonium.item.ModItems.Cup
+import io.github.coolman4567.andonium.item.ModItems.Diamond_Shard
+import io.github.coolman4567.andonium.item.ModItems.Heavy_Cream
+import io.github.coolman4567.andonium.item.ModItems.Hot_Chocolate
+import io.github.coolman4567.andonium.item.ModItems.Hot_Chocolate_Powder
+import io.github.coolman4567.andonium.item.ModItems.Hot_Chocolate_Powder_With_Marshmallow
+import io.github.coolman4567.andonium.item.ModItems.Hot_Chocolate_With_Marshmallow
+import io.github.coolman4567.andonium.item.ModItems.Hot_Chocolate_With_Whipped_Cream
+import io.github.coolman4567.andonium.item.ModItems.Hot_Chocolate_With_Whipped_Cream_And_Marshmallow
+import io.github.coolman4567.andonium.item.ModItems.Kotonium
+import io.github.coolman4567.andonium.item.ModItems.Marshmallow
+import io.github.coolman4567.andonium.item.ModItems.Vanilla_Beans
+import io.github.coolman4567.andonium.item.ModItems.Vanilla_Extract
+import io.github.coolman4567.andonium.item.ModItems.Whipped_cream
+import net.minecraft.core.registries.Registries
+import net.minecraft.network.chat.Component
+import net.minecraft.world.item.CreativeModeTab
+import net.minecraft.world.item.CreativeModeTab.ItemDisplayParameters
+import net.minecraft.world.item.ItemStack
+import net.neoforged.bus.api.IEventBus
+import net.neoforged.neoforge.registries.DeferredRegister
+import java.util.function.Supplier
 
-import java.util.function.Supplier;
+object ModCreativeModeTabs {
+    val CREATIVE_MODE_TAB: DeferredRegister<CreativeModeTab> =
+        DeferredRegister.create<CreativeModeTab>(Registries.CREATIVE_MODE_TAB, MOD_ID)
 
-import static io.github.coolman4567.andonium.Andonium.MOD_ID;
+    val ANDONIUM_ITEMS_TAB: Supplier<CreativeModeTab> = CREATIVE_MODE_TAB.register(
+        "andonium_items_tab",
+        Supplier {
+            CreativeModeTab.builder().icon { ItemStack(Andonium.get()) }
+                .title(Component.translatable("creativetab.andonium.andonium_items"))
+                .displayItems { itemDisplayParameters: ItemDisplayParameters?, output: CreativeModeTab.Output ->
+                    output.accept(Andonium)
+                    output.accept(Diamond_Shard)
+                    output.accept(Andonium_Axe)
+                    output.accept(Andonium_Pickaxe)
+                    output.accept(Andonium_Helmet)
+                    output.accept(Andonium_Chestplate)
+                    output.accept(Andonium_Leggings)
+                    output.accept(Andonium_Boots)
+                    output.accept(Kotonium)
+                    output.accept(Hot_Chocolate)
+                    output.accept(Hot_Chocolate_With_Whipped_Cream)
+                    output.accept(Hot_Chocolate_With_Marshmallow)
+                    output.accept(Hot_Chocolate_With_Whipped_Cream_And_Marshmallow)
+                    output.accept(Hot_Chocolate_Powder)
+                    output.accept(Hot_Chocolate_Powder_With_Marshmallow)
+                    output.accept(Whipped_cream)
+                    output.accept(Marshmallow)
+                    output.accept(Cup)
+                    output.accept(Butter)
+                    output.accept(Heavy_Cream)
+                    output.accept(Vanilla_Beans)
+                    output.accept(Vanilla_Extract)
+                }.build()
+        })
 
-public class ModCreativeModeTabs {
-    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MOD_ID);
+    val ANDONIUM_BLOCKS_TAB: Supplier<CreativeModeTab> = CREATIVE_MODE_TAB.register(
+        "andonium_blocks_tab",
+        Supplier {
+            CreativeModeTab.builder().icon { ItemStack(ModBlocks.ANDONIUM_ORE.get()) }
+                .title(Component.translatable("creativetab.andonium.andonium_blocks"))
+                .displayItems { itemDisplayParameters: ItemDisplayParameters?, output: CreativeModeTab.Output ->
+                    output.accept(ModBlocks.ANDONIUM_ORE)
+                }.build()
+        })
 
-    public static final Supplier<CreativeModeTab> ANDONIUM_ITEMS_TAB = CREATIVE_MODE_TAB.register("andonium_items_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.ANDONIUM.get()))
-                    .title(Component.translatable("creativetab.andonium.andonium_items"))
-                    .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(ModItems.ANDONIUM);
-                        output.accept(ModItems.DIAMOND_SHARD);
-                        output.accept(ModItems.ANDONIUM_AXE);
-                        output.accept(ModItems.ANDONIUM_PICKAXE);
-                        output.accept(ModItems.ANDONIUM_HELMET);
-                        output.accept(ModItems.ANDONIUM_CHESTPLATE);
-                        output.accept(ModItems.ANDONIUM_LEGGINGS);
-                        output.accept(ModItems.ANDONIUM_BOOTS);
-                        output.accept(ModItems.INTRO_BOOK);
-                        output.accept(KotlinModItems.INSTANCE.getKotonium());
-                        output.accept(KotlinModItems.INSTANCE.getHot_Chocolate());
-                        output.accept(KotlinModItems.INSTANCE.getHot_Chocolate_With_Whipped_Cream());
-                        output.accept(KotlinModItems.INSTANCE.getHot_Chocolate_With_Marshmallow());
-                        output.accept(KotlinModItems.INSTANCE.getHot_Chocolate_With_Whipped_Cream_And_Marshmallow());
-                        output.accept(KotlinModItems.INSTANCE.getHot_Chocolate_Powder());
-                        output.accept(KotlinModItems.INSTANCE.getHot_Chocolate_Powder_With_Marshmallow());
-                        output.accept(KotlinModItems.INSTANCE.getWhipped_cream());
-                        output.accept(KotlinModItems.INSTANCE.getMarshmallow());
-                        output.accept(KotlinModItems.INSTANCE.getCup());
-                        output.accept(KotlinModItems.INSTANCE.getButter());
-                        output.accept(KotlinModItems.INSTANCE.getHeavy_Cream());
-                        output.accept(KotlinModItems.INSTANCE.getVanilla_Beans());
-                        output.accept(KotlinModItems.INSTANCE.getVanilla_Extract());
-                    }).build());
-
-    public static final Supplier<CreativeModeTab> ANDONIUM_BLOCKS_TAB = CREATIVE_MODE_TAB.register("andonium_blocks_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.ANDONIUM_ORE.get()))
-                    .title(Component.translatable("creativetab.andonium.andonium_blocks"))
-                    .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(ModBlocks.ANDONIUM_ORE);
-                    }).build());
-
-    public static void register(IEventBus eventBus) {
-        CREATIVE_MODE_TAB.register(eventBus);
+    fun register(eventBus: IEventBus) {
+        CREATIVE_MODE_TAB.register(eventBus)
     }
 }

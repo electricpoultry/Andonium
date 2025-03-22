@@ -26,7 +26,7 @@ public class ModArmorMaterials {
                 attribute.put(ArmorItem.Type.CHESTPLATE, 6);
                 attribute.put(ArmorItem.Type.HELMET, 2);
                 attribute.put(ArmorItem.Type.BODY, 6);
-            }), 9, 1f, 0.1f, () -> ModItems.ANDONIUM.get());
+            }), 9, 1f, 0.1f, () -> ModItems.INSTANCE.getAndonium().get());
 
 
     private static Holder<ArmorMaterial> register(String name, EnumMap<ArmorItem.Type, Integer> typeProtection,
