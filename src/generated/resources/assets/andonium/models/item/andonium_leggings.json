@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "andonium:item/andonium_intro_book"
+    "layer0": "andonium:item/andonium_leggings"
   }
 }

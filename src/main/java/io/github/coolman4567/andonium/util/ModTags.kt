@@ -20,6 +20,7 @@ class ModTags {
 
     object Items {
         val FAKE_TAG_ITEMS: TagKey<Item> = createTag("fake_tag_items")
+        val ANDONIUM_REPAIR: TagKey<Item> = createTag("andonium_repair")
 
         private fun createTag(name: String): TagKey<Item> {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(Andonium.MOD_ID, name))
