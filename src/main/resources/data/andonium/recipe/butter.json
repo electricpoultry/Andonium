@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "H": {
-      "item": "minecraft:milk_bucket"
-    }
+    "H": "minecraft:milk_bucket"
   },
   "pattern": [
     "H  ",

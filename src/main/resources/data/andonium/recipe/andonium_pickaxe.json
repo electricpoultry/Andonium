@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "A": {
-      "item": "andonium:andonium"
-    },
-    "N": {
-      "item": "minecraft:netherite_pickaxe"
-    },
-    "S": {
-      "item": "minecraft:stick"
-    }
+    "A": "andonium:andonium",
+    "N": "minecraft:netherite_pickaxe",
+    "S": "minecraft:stick"
   },
   "pattern": [
     "ANA",

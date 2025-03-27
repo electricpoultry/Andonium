@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "B": {
-      "item": "minecraft:water_bucket"
-    },
-    "H": {
-      "item": "minecraft:sugar"
-    },
-    "T": {
-      "item": "andonium:butter"
-    }
+    "B": "minecraft:water_bucket",
+    "H": "minecraft:sugar",
+    "T": "andonium:butter"
   },
   "pattern": [
     "HB ",

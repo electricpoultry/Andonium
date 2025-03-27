@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "B": {
-      "item": "andonium:vanilla_extract"
-    },
-    "H": {
-      "item": "minecraft:sugar"
-    },
-    "T": {
-      "item": "andonium:heavy_cream"
-    }
+    "B": "andonium:vanilla_extract",
+    "H": "minecraft:sugar",
+    "T": "andonium:heavy_cream"
   },
   "pattern": [
     "HB ",

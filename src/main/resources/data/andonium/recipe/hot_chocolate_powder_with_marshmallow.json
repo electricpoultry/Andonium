@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "B": {
-      "item": "andonium:marshmallow"
-    },
-    "H": {
-      "item": "andonium:hot_chocolate_powder"
-    }
+    "B": "andonium:marshmallow",
+    "H": "andonium:hot_chocolate_powder"
   },
   "pattern": [
     "HB ",

@@ -1,9 +1,7 @@
 {
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
-        {
-            "item": "minecraft:cocoa_beans"
-        }
+        "minecraft:cocoa_beans"
     ],
     "result": {
         "id": "andonium:vanilla_beans",

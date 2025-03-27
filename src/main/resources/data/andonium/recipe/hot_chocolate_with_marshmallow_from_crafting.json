@@ -4,12 +4,8 @@
         "#J"
     ],
     "key": {
-        "#": {
-            "item": "andonium:hot_chocolate"
-        },
-        "J": {
-            "item": "andonium:marshmallow"
-        }
+        "#": "andonium:hot_chocolate",
+        "J": "andonium:marshmallow"
     },
     "result": {
         "id": "andonium:hot_chocolate_with_marshmallow",

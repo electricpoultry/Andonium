@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "C": {
-      "item": "andonium:hot_chocolate"
-    },
-    "E": {
-      "item": "andonium:marshmallow"
-    },
-    "H": {
-      "item": "andonium:whipped_cream"
-    }
+    "C": "andonium:hot_chocolate",
+    "E": "andonium:marshmallow",
+    "H": "andonium:whipped_cream"
   },
   "pattern": [
     "CH ",

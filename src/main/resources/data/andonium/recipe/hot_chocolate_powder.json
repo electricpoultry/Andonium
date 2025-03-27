@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "B": {
-      "item": "minecraft:cocoa_beans"
-    },
-    "H": {
-      "item": "minecraft:sugar"
-    },
-    "T": {
-      "item": "minecraft:milk_bucket"
-    }
+    "B": "minecraft:cocoa_beans",
+    "H": "minecraft:sugar",
+    "T": "minecraft:milk_bucket"
   },
   "pattern": [
     "HB ",
