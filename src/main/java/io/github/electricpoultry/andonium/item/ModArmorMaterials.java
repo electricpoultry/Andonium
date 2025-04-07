@@ -1,4 +1,4 @@
-package io.github.coolman4567.andonium.item;
+package io.github.electricpoultry.andonium.item;
 
 import net.minecraft.Util;
 import net.minecraft.core.Holder;
@@ -16,7 +16,7 @@ import java.util.EnumMap;
 import java.util.List;
 import java.util.function.Supplier;
 
-import static io.github.coolman4567.andonium.Andonium.MOD_ID;
+import static io.github.electricpoultry.andonium.Andonium.MOD_ID;
 
 public class ModArmorMaterials {
     public static final Holder<ArmorMaterial> ANDONIUM_ARMOR_MATERIAL = register("andonium",

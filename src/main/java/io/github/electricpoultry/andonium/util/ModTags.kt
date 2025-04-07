@@ -1,6 +1,6 @@
-package io.github.coolman4567.andonium.util
+package io.github.electricpoultry.andonium.util
 
-import io.github.coolman4567.andonium.Andonium
+import io.github.electricpoultry.andonium.Andonium
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.tags.BlockTags
 import net.minecraft.tags.ItemTags

@@ -1,4 +1,4 @@
-package io.github.coolman4567.andonium.item
+package io.github.electricpoultry.andonium.item
 
 import net.minecraft.world.effect.MobEffectInstance
 import net.minecraft.world.effect.MobEffects

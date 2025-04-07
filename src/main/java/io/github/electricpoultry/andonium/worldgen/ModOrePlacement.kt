@@ -1,4 +1,4 @@
-package io.github.coolman4567.andonium.worldgen
+package io.github.electricpoultry.andonium.worldgen
 
 import net.minecraft.world.level.levelgen.placement.*
 

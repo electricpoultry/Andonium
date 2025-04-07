@@ -1,4 +1,4 @@
-package io.github.coolman4567.andonium;
+package io.github.electricpoultry.andonium;
 
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
@@ -6,7 +6,7 @@ import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 import net.neoforged.neoforge.network.handling.IPayloadHandler;
 import net.neoforged.neoforge.network.registration.PayloadRegistrar;
-import io.github.coolman4567.andonium.util.registers.Registers;
+import io.github.electricpoultry.andonium.util.registers.Registers;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;

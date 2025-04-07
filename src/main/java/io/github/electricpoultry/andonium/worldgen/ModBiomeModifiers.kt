@@ -1,6 +1,6 @@
-package io.github.coolman4567.andonium.worldgen
+package io.github.electricpoultry.andonium.worldgen
 
-import io.github.coolman4567.andonium.Andonium
+import io.github.electricpoultry.andonium.Andonium
 import net.minecraft.core.HolderSet
 import net.minecraft.core.registries.Registries
 import net.minecraft.data.worldgen.BootstrapContext

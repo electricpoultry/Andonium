@@ -1,9 +1,9 @@
-package io.github.coolman4567.andonium.item
+package io.github.electricpoultry.andonium.item
 
 import net.neoforged.bus.api.IEventBus
 import net.neoforged.neoforge.registries.DeferredItem
 import net.neoforged.neoforge.registries.DeferredRegister
-import io.github.coolman4567.andonium.Andonium.MOD_ID
+import io.github.electricpoultry.andonium.Andonium.MOD_ID
 import net.minecraft.world.item.*
 import java.util.function.Supplier
 
