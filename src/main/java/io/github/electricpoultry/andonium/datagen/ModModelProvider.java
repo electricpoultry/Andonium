@@ -1,9 +1,8 @@
-package io.github.coolman4567.andonium.datagen;
+package io.github.electricpoultry.andonium.datagen;
 
-import io.github.coolman4567.andonium.block.ModBlocks;
-import io.github.coolman4567.andonium.item.ModArmorMaterials;
-import io.github.coolman4567.andonium.item.ModEquipmentAssets;
-import io.github.coolman4567.andonium.item.ModItems;
+import io.github.electricpoultry.andonium.block.ModBlocks;
+import io.github.electricpoultry.andonium.item.ModEquipmentAssets;
+import io.github.electricpoultry.andonium.item.ModItems;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;

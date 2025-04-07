@@ -1,4 +1,4 @@
-package io.github.coolman4567.andonium.item;
+package io.github.electricpoultry.andonium.item;
 
 
 import net.minecraft.client.resources.model.EquipmentClientInfo;
@@ -9,7 +9,7 @@ import net.minecraft.world.item.equipment.EquipmentAsset;
 
 import java.util.function.BiConsumer;
 
-import static io.github.coolman4567.andonium.Andonium.MOD_ID;
+import static io.github.electricpoultry.andonium.Andonium.MOD_ID;
 
 public class ModEquipmentAssets {
     private static final ResourceKey<? extends Registry<EquipmentAsset>> ROOT_ID = ResourceKey.createRegistryKey(ResourceLocation.withDefaultNamespace("equipment_asset"));

@@ -1,8 +1,8 @@
-package io.github.coolman4567.andonium.util.registers
+package io.github.electricpoultry.andonium.util.registers
 
-import io.github.coolman4567.andonium.item.ModCreativeModeTabs
-import io.github.coolman4567.andonium.block.ModBlocks
-import io.github.coolman4567.andonium.item.ModItems
+import io.github.electricpoultry.andonium.item.ModCreativeModeTabs
+import io.github.electricpoultry.andonium.block.ModBlocks
+import io.github.electricpoultry.andonium.item.ModItems
 import net.neoforged.bus.api.IEventBus
 
 object Registers {

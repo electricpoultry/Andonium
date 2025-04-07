@@ -1,6 +1,6 @@
-package io.github.coolman4567.andonium.datagen;
+package io.github.electricpoultry.andonium.datagen;
 
-import io.github.coolman4567.andonium.block.ModBlocks;
+import io.github.electricpoultry.andonium.block.ModBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;

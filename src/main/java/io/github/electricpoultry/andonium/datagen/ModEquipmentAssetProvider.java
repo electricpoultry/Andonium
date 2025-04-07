@@ -1,6 +1,6 @@
-package io.github.coolman4567.andonium.datagen;
+package io.github.electricpoultry.andonium.datagen;
 
-import io.github.coolman4567.andonium.item.ModEquipmentAssets;
+import io.github.electricpoultry.andonium.item.ModEquipmentAssets;
 import net.minecraft.client.data.models.EquipmentAssetProvider;
 import net.minecraft.client.resources.model.EquipmentClientInfo;
 import net.minecraft.data.CachedOutput;

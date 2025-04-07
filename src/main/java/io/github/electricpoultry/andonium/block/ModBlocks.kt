@@ -1,8 +1,8 @@
-package io.github.coolman4567.andonium.block
+package io.github.electricpoultry.andonium.block
 
-import io.github.coolman4567.andonium.Andonium
-import io.github.coolman4567.andonium.Andonium.MOD_ID
-import io.github.coolman4567.andonium.item.ModItems
+import io.github.electricpoultry.andonium.Andonium
+import io.github.electricpoultry.andonium.Andonium.MOD_ID
+import io.github.electricpoultry.andonium.item.ModItems
 import net.minecraft.core.registries.Registries
 import net.minecraft.resources.ResourceKey
 import net.minecraft.resources.ResourceLocation

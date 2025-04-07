@@ -1,27 +1,16 @@
-package io.github.coolman4567.andonium.item;
+package io.github.electricpoultry.andonium.item;
 
-import io.github.coolman4567.andonium.util.ModTags;
+import io.github.electricpoultry.andonium.util.ModTags;
 import net.minecraft.Util;
-import net.minecraft.core.Holder;
-import net.minecraft.core.Registry;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.equipment.ArmorMaterial;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.equipment.ArmorMaterial;
 import net.minecraft.world.item.equipment.ArmorType;
-import net.minecraft.world.item.equipment.EquipmentAsset;
 
 import java.util.EnumMap;
-import java.util.List;
-import java.util.function.Supplier;
 
-import static io.github.coolman4567.andonium.Andonium.MOD_ID;
+import static io.github.electricpoultry.andonium.Andonium.MOD_ID;
 
 public class ModArmorMaterials {
     public static final ArmorMaterial ANDONIUM_ARMOR_MATERIAL = new ArmorMaterial(1200,

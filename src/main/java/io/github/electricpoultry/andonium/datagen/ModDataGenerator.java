@@ -1,4 +1,4 @@
-package io.github.coolman4567.andonium.datagen;
+package io.github.electricpoultry.andonium.datagen;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
@@ -11,7 +11,7 @@ import org.jetbrains.annotations.ApiStatus;
 
 import java.util.concurrent.CompletableFuture;
 
-import static io.github.coolman4567.andonium.Andonium.MOD_ID;
+import static io.github.electricpoultry.andonium.Andonium.MOD_ID;
 
 @ApiStatus.Internal
 @EventBusSubscriber(modid = MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
