@@ -1,16 +1,14 @@
 package io.github.electricpoultry.andonium.item;
 
-import net.minecraft.Util;
-import net.minecraft.core.Holder;
-import net.minecraft.core.Registry;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.ArmorMaterial;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.item.ArmorItem;
+import net.minecraft.item.ArmorMaterial;
+import net.minecraft.recipe.Ingredient;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.sound.SoundEvents;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.Util;
 
 import java.util.EnumMap;
 import java.util.List;
@@ -19,30 +17,18 @@ import java.util.function.Supplier;
 import static io.github.electricpoultry.andonium.Andonium.MOD_ID;
 
 public class ModArmorMaterials {
-    public static final Holder<ArmorMaterial> ANDONIUM_ARMOR_MATERIAL = register("andonium",
-            Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
-                attribute.put(ArmorItem.Type.BOOTS, 2);
-                attribute.put(ArmorItem.Type.LEGGINGS, 5);
-                attribute.put(ArmorItem.Type.CHESTPLATE, 6);
-                attribute.put(ArmorItem.Type.HELMET, 2);
-                attribute.put(ArmorItem.Type.BODY, 6);
-            }), 9, 1f, 0.1f, () -> ModItems.INSTANCE.getAndonium().get());
+    public static final RegistryEntry<ArmorMaterial> ANDONIUM = registerArmorMaterial("andonium",
+            () -> new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
+                map.put(ArmorItem.Type.BOOTS, 2);
+                map.put(ArmorItem.Type.LEGGINGS, 5);
+                map.put(ArmorItem.Type.CHESTPLATE, 6);
+                map.put(ArmorItem.Type.HELMET, 2);
+                map.put(ArmorItem.Type.BODY, 6);
+            }), 20, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, () -> Ingredient.ofItems(ModItems.ANDONIUM),
+                    List.of(new ArmorMaterial.Layer(Identifier.of(MOD_ID, "andonium"))), 0,0));
 
 
-    private static Holder<ArmorMaterial> register(String name, EnumMap<ArmorItem.Type, Integer> typeProtection,
-                                                  int enchantability, float toughness, float knockbackResistance,
-                                                  Supplier<Item> ingredientItem) {
-        ResourceLocation location = ResourceLocation.fromNamespaceAndPath(MOD_ID, name);
-        Holder<SoundEvent> equipSound = SoundEvents.ARMOR_EQUIP_DIAMOND;
-        Supplier<Ingredient> ingredient = () -> Ingredient.of(ingredientItem.get());
-        List<ArmorMaterial.Layer> layers = List.of(new ArmorMaterial.Layer(location));
-
-        EnumMap<ArmorItem.Type, Integer> typeMap = new EnumMap<>(ArmorItem.Type.class);
-        for (ArmorItem.Type type : ArmorItem.Type.values()) {
-            typeMap.put(type, typeProtection.get(type));
-        }
-
-        return Registry.registerForHolder(BuiltInRegistries.ARMOR_MATERIAL, location,
-                new ArmorMaterial(typeProtection, enchantability, equipSound, ingredient, layers, toughness, knockbackResistance));
+    public static RegistryEntry<ArmorMaterial> registerArmorMaterial(String name, Supplier<ArmorMaterial> material) {
+        return Registry.registerReference(Registries.ARMOR_MATERIAL, Identifier.of(MOD_ID, name), material.get());
     }
 }

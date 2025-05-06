@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "andonium",
+	"version": "${version}",
+	"name": "Andonium",
+	"description": "A Mod That Adds Andonium Ore, Tools And More.",
+	"authors": [
+		"ElectricPoultry"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/mod/andonium",
+		"sources": "https://github.com/electricpoultry/Andonium/tree/Fabric-1.21.1",
+		"issues": "https://github.com/electricpoultry/Andonium/issues"
+	},
+	"license": "GNU LGPLv3",
+	"icon": "assets/andonium/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"io.github.electricpoultry.andonium.Andonium"
+		],
+		"fabric-datagen": [
+			"io.github.electricpoultry.andonium.AndoniumDataGenerator"
+		]
+	},
+	"mixins": [
+		"andonium.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.13",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
