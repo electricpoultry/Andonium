@@ -1,0 +1,30 @@
+{
+  "item.andonium.andonium": "Andonium",
+  "item.andonium.diamond_shard": "Éclat de diamant",
+  "item.andonium.andonium_pickaxe": "Pioche Andonium",
+  "item.andonium.andonium_axe": "Hache d'Andonium",
+  "item.andonium.andonium_helmet": "Casque Andonium",
+  "item.andonium.andonium_chestplate": "Plaque de poitrine Andonium",
+  "item.andonium.andonium_leggings": "Pantalon Andonium",
+  "item.andonium.andonium_boots": "Bottes Andonium",
+  "item.andonium.hot_chocolate": "Chocolat chaud",
+  "item.andonium.hot_chocolate_powder": "Chocolat chaud en poudre",
+  "item.andonium.hot_chocolate_powder_with_marshmallow": "Poudre de chocolat chaud aux guimauves",
+  "item.andonium.hot_chocolate_with_whipped_cream": "Chocolat chaud à la crème fouettée",
+  "item.andonium.hot_chocolate_with_marshmallow": "Chocolat chaud aux guimauves",
+  "item.andonium.hot_chocolate_with_whipped_cream_and_marshmallow": "Chocolat chaud avec crème fouettée et guimauves",
+  "item.andonium.whipped_cream": "Crème fouettée",
+  "item.andonium.marshmallow": "Guimauves",
+  "item.andonium.cup": "Tasse",
+  "item.andonium.butter": "Beurre",
+  "item.andonium.heavy_cream": "Crème épaisse",
+  "item.andonium.vanilla_beans": "Gousses de vanille",
+  "item.andonium.vanilla_extract": "Extrait de vanille",
+
+  "block.andonium.andonium_ore": "Minerai d'andonium",
+  "block.andonium.andonium_deepslate_ore": "Minerai d'andonium d'ardoise profonde",
+
+  "creativetab.andonium.andonium_items": "Articles d'Andonium",
+  "creativetab.andonium.andonium_blocks": "Blocs d'andonium",
+  "creativetab.andonium.andonium_equipment": "Équipement Andonium"
+}

@@ -31,32 +31,12 @@ public class Andonium {
     public static final String MOD_ID = "andonium";
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    private static boolean networkingRegistered = false;
-    private static final Map<CustomPacketPayload.Type<?>, NetworkMessage<?>> MESSAGES = new HashMap<>();
-
-    private record NetworkMessage<T extends CustomPacketPayload>(StreamCodec<? extends FriendlyByteBuf, T> reader, IPayloadHandler<T> handler) {
-    }
-
-    public static <T extends CustomPacketPayload> void addNetworkMessage(CustomPacketPayload.Type<T> id, StreamCodec<? extends FriendlyByteBuf, T> reader, IPayloadHandler<T> handler) {
-        if (networkingRegistered)
-            throw new IllegalStateException("Cannot register new network messages after networking has been registered");
-        MESSAGES.put(id, new NetworkMessage<>(reader, handler));
-    }
-
-    @SuppressWarnings({"rawtypes", "unchecked"})
-    private void registerNetworking(final RegisterPayloadHandlersEvent event) {
-        final PayloadRegistrar registrar = event.registrar(MOD_ID);
-        MESSAGES.forEach((id, networkMessage) -> registrar.playBidirectional(id, ((NetworkMessage) networkMessage).reader(), ((NetworkMessage) networkMessage).handler()));
-        networkingRegistered = true;
-    }
-
     public Andonium(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
 
         Registers.registerAll(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
-        modEventBus.addListener(this::registerNetworking);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {

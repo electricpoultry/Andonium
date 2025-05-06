@@ -7,7 +7,6 @@
   "item.andonium.andonium_chestplate": "Andonium Chestplate",
   "item.andonium.andonium_leggings": "Andonium Leggings",
   "item.andonium.andonium_boots": "Andonium Boots",
-  "item.andonium.andonium_intro_book": "Andonium Mod Intro Book",
   "item.andonium.hot_chocolate": "Hot Chocolate",
   "item.andonium.hot_chocolate_powder": "Hot Chocolate Powder",
   "item.andonium.hot_chocolate_powder_with_marshmallow": "Hot Chocolate Powder With Marshmallows",
@@ -23,12 +22,9 @@
   "item.andonium.vanilla_extract": "Vanilla Extract",
 
   "block.andonium.andonium_ore": "Andonium Ore",
-
-  "gui.andonium.andoniumbookgui.label_hello_and_welcome_to_the_andoniu": "Hello And Welcome To",
-  "gui.andonium.andoniumbookgui.label_the_andonium_mod": "The Andonium Mod",
-  "gui.andonium.andoniumbookgui.label_have_fun": "Have Fun",
-  "gui.andonium.andoniumbookgui.button_hello": "Done",
+  "block.andonium.andonium_deepslate_ore": "Deepslate Andonium Ore",
 
   "creativetab.andonium.andonium_items": "Andonium Items",
-  "creativetab.andonium.andonium_blocks": "Andonium Blocks"
+  "creativetab.andonium.andonium_blocks": "Andonium Blocks",
+  "creativetab.andonium.andonium_equipment": "Andonium Equipment"
 }
