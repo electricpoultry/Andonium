@@ -1,11 +1,7 @@
 package io.github.electricpoultry.andonium.item;
 
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.AxeItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.PickaxeItem;
-import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -32,6 +28,16 @@ public class ModItems {
             () -> new AxeItem(ModToolTiers.ANDONIUM_AXE, new Item.Properties()
                     .rarity(Rarity.EPIC)
                     .attributes(AxeItem.createAttributes(ModToolTiers.ANDONIUM_AXE, 6.0f, -2.0f))));
+
+    public static final DeferredHolder<Item, ShovelItem> ANDONIUM_SHOVEL = ITEMS.register("andonium_shovel",
+            () -> new ShovelItem(ModToolTiers.ANDONIUM_PICKAXE, new Item.Properties()
+                    .rarity(Rarity.EPIC)
+                    .attributes(ShovelItem.createAttributes(ModToolTiers.ANDONIUM_PICKAXE, 6.0f, -2.0f))));
+
+    public static final DeferredHolder<Item, HoeItem> ANDONIUM_HOE = ITEMS.register("andonium_hoe",
+            () -> new HoeItem(ModToolTiers.ANDONIUM_AXE, new Item.Properties()
+                    .rarity(Rarity.EPIC)
+                    .attributes(HoeItem.createAttributes(ModToolTiers.ANDONIUM_AXE, 6.0f, -2.0f))));
 
     public static final DeferredHolder<Item, ArmorItem> ANDONIUM_HELMET = ITEMS.register("andonium_helmet",
             () -> new ArmorItem(ModArmorMaterials.ANDONIUM_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Properties()));

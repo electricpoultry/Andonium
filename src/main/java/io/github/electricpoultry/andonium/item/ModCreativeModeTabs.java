@@ -59,6 +59,8 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.ANDONIUM_AXE.get());
                         output.accept(ModItems.ANDONIUM_PICKAXE.get());
+                        output.accept(ModItems.ANDONIUM_SHOVEL.get());
+                        output.accept(ModItems.ANDONIUM_HOE.get());
                         output.accept(ModItems.ANDONIUM_HELMET.get());
                         output.accept(ModItems.ANDONIUM_CHESTPLATE.get());
                         output.accept(ModItems.ANDONIUM_LEGGINGS.get());

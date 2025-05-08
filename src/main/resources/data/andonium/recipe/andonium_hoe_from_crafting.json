@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#N",
+        " /",
+        " /"
+    ],
+    "key": {
+        "#": {
+            "item": "andonium:andonium"
+        },
+        "N": {
+            "item": "minecraft:netherite_hoe"
+        },
+        "/": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+        "id": "andonium:andonium_hoe",
+        "count": 1
+    }
+}
